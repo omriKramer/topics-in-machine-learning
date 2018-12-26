@@ -12,8 +12,9 @@ function [w]=learn_linear(X,Y,B)
        else
            g = 0;
        end
+       %update
        u = W(t, :) - (g / sqrt(t));
-       
+       %normalize
        if norm(u) > B
            u = B * u / norm(u);
        end
