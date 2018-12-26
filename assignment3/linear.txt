@@ -1,0 +1,10 @@
+The average losses we got were:
+B=10^-5 : 0.46
+B=1     : 0.02
+B=10^5  : 0.045
+
+From those results (that we ran multiple times) we derive that the best value of B is B=1. 
+We believe that the reason that B=1 outperformed B=10^-5 is that the latter defines a small hypothesis space, too small to generalize well - or in other words, it is so small that we get underfit.
+We believe that the reason that B=1 outperformed B=10^5 is that the latter defines a huge hypothesis space that enabled the predictor to overfit over our training set. 
+
+From the way the visualization of w (for B=1), we can see concentration of bright pixels in areas that usually contain pixels of the digit "4", and only "4". On the other hand, we see 2 concentrations of dark pixel where we usually see parts of the digits "7". That shows us the pixels on which our predictor relies on to decide whether the image is "4" or "7".
