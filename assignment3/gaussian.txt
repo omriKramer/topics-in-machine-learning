@@ -1,0 +1,3 @@
+The first difference we notice between the two images is that the middle points (a couple of blue points) have a boundary surrounding them for B=100, while for B=1 there isn't. Another difference is that the boundaries for B=1 are rounder and resemble much more circles, while the boundaries for B=100 tend to change in a more aggresive way, almost forming rectangles. 
+
+A large hypothesis class (high B value) is much more likely to overfit since if we allow the weights to have a big norm, that would allow single outliers to define a boundary around them, that would work well on the training set, but does not generalize well - we would not want a blue outlier in the middle of many red points to define a boundary around itself. 
